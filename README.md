@@ -1,5 +1,5 @@
-# mastodon-bookmarklets
-Bookmarklets for Mastodon social network, including one for remote following
+# Mastodon Bookmarklets
+Bookmarklets for use browsing the Mastodon social network, including one for remote following
 
 ## Remote follow
 
