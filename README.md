@@ -8,3 +8,10 @@ The eventual intention is for this to be used for all follows, regardless of whe
 Right now, only other-instance accounts functionality is working.
 
 Highlight the @who@foo.bar account identifier and click the bookmarklet.
+
+TODO:
+
+* make it clickable from profile page w/ out having to highlight anything
+* trim whitespace? double-click for highliting didn't work on profile page
+* make it able to have hard-coded options for which accounts you have and prompt to use one (then it needs to populate the page)
+* make it work for same-instance follow (w/ no instance name highlighted)
