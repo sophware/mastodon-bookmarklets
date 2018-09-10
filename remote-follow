@@ -1,0 +1,1 @@
+javascript:window.open('https://'+encodeURIComponent(window.getSelection().toString().split("@")[2],".")+'/users/'+encodeURIComponent(window.getSelection().toString().split("@")[1],".")+'/remote_follow')
