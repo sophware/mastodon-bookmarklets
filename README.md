@@ -12,6 +12,6 @@ Highlight the @who@foo.bar account identifier and click the bookmarklet.
 TODO:
 
 * make it clickable from profile page w/ out having to highlight anything
-* trim whitespace? double-click for highliting didn't work on profile page
+* ~~trim whitespace? double-click for highliting didn't work on profile page~~
 * make it able to have hard-coded options for which accounts you have and prompt to use one (then it needs to populate the page)
 * make it work for same-instance follow (w/ no instance name highlighted)
