@@ -80,7 +80,7 @@
 <body onload="generateLink()">
 
 	<header>
-		<h1>Mastodon Toot Bookmarklet</h1>
+		<h1>Mastodon Follow Bookmarklet v0.91</h1>
 		<h2>Toot the page you're currently on</h2>
 	</header>
 
@@ -107,8 +107,15 @@
 			<p><a href="https://github.com/rmlewisuk/mastodon-toot-bookmarklet">Source on GitHub</a></p>
 		</footer>
 	</div>
+	
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/handlebars-v2.0.0.js"></script>
 
 	<script>
+		$.get( "https://raw.githubusercontent.com/sophware/mastodon-bookmarklets/master/remote-follow", function( data ) {
+		  var bookmarklet = data;
+		  window.alert(bookmarklet);
+		  });
 		generateLink = function() {
 			var instance = document.getElementById('instance').value;
 			var href = `javascript:window.open('https://${instance}/share?text='+encodeURIComponent(document.title)+' '+encodeURIComponent(window.location.href)+encodeURIComponent(window.getSelection().toString() ? '\n\n': '')+encodeURIComponent(window.getSelection().toString()), '_blank','width=600,height=600,toolbar=no')`;
