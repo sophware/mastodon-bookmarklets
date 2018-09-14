@@ -1,1 +1,1 @@
-javascript:window.open('https://test.mastodon.social/authorize_follow?acct='+encodeURIComponent(window.getSelection().toString().match(/(@)(\S+)/)[2]))
+javascript:window.open('https://example.mastodon.instance/authorize_follow?acct='+encodeURIComponent(window.getSelection().toString().match(/(@)(\S+)/)[2]))
