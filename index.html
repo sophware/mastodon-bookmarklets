@@ -143,7 +143,7 @@
 				var bookmarklet = data;
 				//bookmarklet = encodeURIComponent(bookmarklet);
 				var hostname = bookmarklet.toString().match(/\/\/([^\/]+)\//)[1];
-				document.getElementById('link').href = bookmarklet;
+				document.getElementById('link').href = encodeURI(bookmarklet);
 				document.getElementById('input').innerHTML = bookmarklet;				
 				document.getElementById('instance').value = hostname;		
 				});
@@ -156,7 +156,7 @@
 				var oldHostname = oldBookmarklet.toString().match(/\/\/([^\/]+)\//)[1];
 				var re = new RegExp(oldHostname,"g");
 				var newBookmarklet = oldBookmarklet.replace(re,instance);
-				document.getElementById('link').href = newBookmarklet;
+				document.getElementById('link').href = encodeURI(newBookmarklet);
 				document.getElementById('input').innerHTML = newBookmarklet;
 		}
 		
