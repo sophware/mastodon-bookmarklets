@@ -11,7 +11,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-		<title>Mastodon Follow Bookmarklet v0.9</title>
+		<title>Mastodon Follow Bookmarklet</title>
 
 		<style>
 			html, body {
@@ -87,7 +87,7 @@
 <body>
 
 	<header>
-		<h1>Mastodon Follow Bookmarklet v0.91</h1>
+		<h1>Mastodon Follow Bookmarklet</h1>
 		<h2>Toot the page you're currently on</h2>
 	</header>
 
@@ -120,7 +120,7 @@
 	<script>
 		
 		grabBookmarklet = function() {
-			$.get( "https://raw.githubusercontent.com/sophware/mastodon-bookmarklets/master/remote-follow", function( data ) {
+			$.get( "https://raw.githubusercontent.com/sophware/mastodon-bookmarklets/master/smart-follow", function( data ) {
 				var bookmarklet = data;
 				var hostname = bookmarklet.toString().match(/\/\/([^\/]+)\//)[1];
 				document.getElementById('link').href = bookmarklet;
