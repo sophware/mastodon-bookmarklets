@@ -141,7 +141,7 @@
 		grabBookmarklet = function() {
 			$.get( "https://raw.githubusercontent.com/sophware/mastodon-bookmarklets/master/smart-follow", function( data ) {
 				var bookmarklet = data;
-				bookmarklet = encodeURIComponent(bookmarklet);
+				//bookmarklet = encodeURIComponent(bookmarklet);
 				var hostname = bookmarklet.toString().match(/\/\/([^\/]+)\//)[1];
 				document.getElementById('link').href = bookmarklet;
 				document.getElementById('input').innerHTML = bookmarklet;				
