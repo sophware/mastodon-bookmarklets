@@ -11,7 +11,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
 		<link rel="shortcut icon" type="image/x-icon" href="images/icons8-add-64.png">
-		<title>Mastodon Follow Bookmarkle tt</title>
+		<title>Mastodon Follow Bookmarklet</title>
 
 		<style>
 			html, body {
@@ -144,7 +144,7 @@
 				var bookmarklet = "var fart=2,tart=5;1!=fart&&2!=fart||window.alert("whatevs");";
 				//bookmarklet = encodeURIComponent(bookmarklet);
 				var hostname = bookmarklet.toString().match(/\/\/([^\/]+)\//)[1];
-				document.getElementById('link').href = encodeURI(bookmarklet);
+				document.getElementById('link').href = bookmarklet;
 				document.getElementById('input').innerHTML = bookmarklet;				
 				document.getElementById('instance').value = hostname;		
 				});
@@ -158,7 +158,7 @@
 				//var re = new RegExp(oldHostname,"g");
 				//var newBookmarklet = oldBookmarklet.replace(re,instance);
 				var newBookmarklet = "var bookmarklet = "var fart=2,tart=5;1!=fart&&2!=fart||window.alert("whatevs");";
-				document.getElementById('link').href = encodeURI(newBookmarklet);
+				document.getElementById('link').href = newBookmarklet;
 				document.getElementById('input').innerHTML = newBookmarklet;
 		}
 		
