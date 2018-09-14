@@ -1,0 +1,1 @@
+javascript:window.open('https://example.mastodon.instance/authorize_follow?acct='+encodeURIComponent(window.getSelection().toString().match(/(@)(\S+)/)[2]), '_blank','width=600,height=600,toolbar=no')

@@ -69,7 +69,7 @@
 
 			#input {
 				width: 100%;
-			    max-width: 500px;
+			    max-width: 900px;
 			    height: 130px;
 			    font-family: monospace;
 			}
@@ -95,23 +95,24 @@
 
 		<p>1. Add your Mastodon instance:</p>
 
-		<input onkeyup="updateBookmarklet()" id="instance" type="text" value="mastodon.social">
+		<input onkeyup="updateBookmarklet()" id="instance" type="text" value="">
 
 		<p>2. Drag this link to your bookmarks bar (or click it to try it out with this page)</p>
 
-		<p class="link-wrap"><a id="link" href="">Toot!</a></p>
+		<p class="link-wrap"><a id="link" href="">Smart Follow!</a></p>
 
 		3. Or add the following as a bookmark URL:
 
 		<p><textarea id="input" onfocus="this.select();" readonly></textarea></p>
 
-		<p><small>NB: If you select text before clicking, it will add that to the toot as well!</small></p>
+		
 
 		<footer>
-			<p><a href="https://rmlewisuk.github.io/better-mastodon/">Better Mastodon; CSS tweaks</a></p>
-			<p>Made by <a href="https://robblewis.me">Robb Lewis</a></p>
+			<p>Adapted from bookmarklet made by <a href="https://robblewis.me">Robb Lewis</a></p>
 			<p>Mastodon: <a href="https://toot.rodeo/@rmlewisuk">@rmlewisuk@toot.rodeo</a></p>
-			<p><a href="https://github.com/rmlewisuk/mastodon-toot-bookmarklet">Source on GitHub</a></p>
+			<p>Adapted and modified by Sophware</p>
+			<p>Mastodon: <a href="https://mastodon.technology/@sophware">@sophware@mastodon.technology</a></p>
+			<p><a href="https://github.com/sophware/mastodon-bookmarklets">Source on GitHub</a></p>
 		</footer>
 	</div>
 
