@@ -141,6 +141,7 @@
 		grabBookmarklet = function() {
 			$.get( "https://raw.githubusercontent.com/sophware/mastodon-bookmarklets/master/smart-follow", function( data ) {
 				var bookmarklet = data;
+				//bookmarklet = encodeURIComponent(bookmarklet);
 				var hostname = bookmarklet.toString().match(/\/\/([^\/]+)\//)[1];
 				document.getElementById('link').href = bookmarklet;
 				document.getElementById('input').innerHTML = bookmarklet;				
@@ -153,9 +154,8 @@
 				var instance = document.getElementById('instance').value;
 				var oldBookmarklet = document.getElementById('input').innerHTML;
 				var oldHostname = oldBookmarklet.toString().match(/\/\/([^\/]+)\//)[1];
-				var newBookmarklet = oldBookmarklet.replace(oldHostname,instance);
-				//var href = `javascript:window.open('https://${instance}/share?text='+encodeURIComponent(document.title)+' '+encodeURIComponent(window.location.href)+encodeURIComponent(window.getSelection().toString() ? '\n\n': '')+encodeURIComponent(window.getSelection().toString()), '_blank','width=600,height=600,toolbar=no')`;
-
+				var re = new RegExp(oldHostname,"g");
+				var newBookmarklet = oldBookmarklet.replace(re,instance);
 				document.getElementById('link').href = newBookmarklet;
 				document.getElementById('input').innerHTML = newBookmarklet;
 		}
