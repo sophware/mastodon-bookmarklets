@@ -153,7 +153,8 @@
 				var instance = document.getElementById('instance').value;
 				var oldBookmarklet = document.getElementById('input').innerHTML;
 				var oldHostname = oldBookmarklet.toString().match(/\/\/([^\/]+)\//)[1];
-				var newBookmarklet = oldBookmarklet.replace(oldHostname,instance);
+				var re = new RegExp(oldHostname,"g");
+				var newBookmarklet = oldBookmarklet.replace(re,instance);
 				//var href = `javascript:window.open('https://${instance}/share?text='+encodeURIComponent(document.title)+' '+encodeURIComponent(window.location.href)+encodeURIComponent(window.getSelection().toString() ? '\n\n': '')+encodeURIComponent(window.getSelection().toString()), '_blank','width=600,height=600,toolbar=no')`;
 
 				document.getElementById('link').href = newBookmarklet;
