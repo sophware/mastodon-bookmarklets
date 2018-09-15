@@ -1,1 +1,48 @@
-javascript:var cUL=0,pUL=0,fSL=0,hostname=location.hostname,uL=0,username="",followURL="";try{var columnUsername=document.getElementsByClassName("account__header__username")[0].innerHTML;cUL=columnUsername.match(/@/g).length}catch(e){}try{pUL=(profileUsername=document.getElementsByClassName("public-account-header__tabs__name")[0].innerText).match(/@/g).length}catch(e){}try{if(null==profileUsername){var profileUsername;pUL=(profileUsername=document.getElementsByClassName("name")[0].innerText).match(/@/g).length}}catch(e){}try{var fullSelection=window.getSelection().toString();fSL=fullSelection.match(/@/g).length}catch(e){}fSL?(username=fullSelection.match(/(@)(\S[^<\n]+)/)[2],uL=fSL):cUL?(username=columnUsername.match(/(@)(\S[^<\n]+)/)[2],uL=cUL):pUL&&(username=profileUsername.match(/(@)(\S[^<\n]+)/)[2],uL=pUL),username=username.trim(),hostname=hostname.trim(),username&&(followURL=username.match(/@/g)?"https://example.mastodon.instance/authorize_follow?acct="+encodeURIComponent(username):"https://example.mastodon.instance/authorize_follow?acct="+encodeURIComponent(username+"@"+hostname),window.open(followURL,"_blank","width=600,height=600,toolbar=no"));
+javascript:
+var cUL = 0;
+var pUL = 0;
+var fSL = 0;
+var hostname = location.hostname;
+var uL = 0;
+var username = "";
+var followURL = "";
+
+try {
+   var columnUsername = document.getElementsByClassName("account__header__username")[0].innerHTML;
+   var cUL = columnUsername.match(/@/g || []).length;
+} catch (err) {}
+try {
+   var profileUsername = document.getElementsByClassName('public-account-header__tabs__name')[0].innerText;
+   var pUL = profileUsername.match(/@/g || []).length;
+} catch (err) {}
+try {
+   if (profileUsername == null) {var profileUsername = document.getElementsByClassName('name')[0].innerText;
+   var pUL = profileUsername.match(/@/g || []).length;
+   }
+} catch (err) {}
+try {
+   var fullSelection = window.getSelection().toString();
+   var fSL = fullSelection.match(/@/g || []).length;
+} catch (err) {}
+
+if (fSL) {
+   username = fullSelection.match(/(@)(\S[^\n]+)/)[2];
+   uL = fSL;
+} else if (cUL) {
+   username = columnUsername.match(/(@)(\S[^\n]+)/)[2];
+   uL = cUL;
+} else if (pUL) {
+   username = profileUsername.match(/(@)(\S[^\n]+)/)[2];
+   uL = pUL;
+}
+username = username.trim();
+hostname = hostname.trim();
+
+if (username) {
+	if (username.match(/@/g)) {
+    	followURL='https://example.mastodon.instance/authorize_follow?acct='+encodeURIComponent(username);
+	} else {
+		followURL='https://example.mastodon.instance/authorize_follow?acct='+encodeURIComponent(username+'@'+hostname);
+	}    
+    window.open(followURL, '_blank','width=600,height=600,toolbar=no');
+}
