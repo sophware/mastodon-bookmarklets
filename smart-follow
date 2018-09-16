@@ -44,5 +44,5 @@ if (username) {
 	} else {
 		followURL='https://example.mastodon.instance/authorize_follow?acct='+encodeURIComponent(username+'@'+hostname);
 	}    
-    window.open(followURL, '_blank','width=600,height=600,toolbar=no');
+    void(window.open(followURL, '_blank','width=600,height=600,toolbar=no');)
 }
