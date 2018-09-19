@@ -1,17 +1,21 @@
-# Mastodon Bookmarklets
-Bookmarklets for use browsing the Mastodon social network, including one for remote following
+# Mastodon Bookmarklets for Chrome
+Bookmarklets for use with the Mastodon social network
 
-## Remote follow
+## Smart follow
 
-The eventual intention is for this to be used for all follows, regardless of whether they are for the instance you are on, or not. Why? I can be browsing at instance foo.bar, where I have an account, but still want to use my bar.foo account to follow.
+Follow an account you have selected on a page.
 
-Update this bookmarklet to have your instance address instead of mastodon.technology. Highlight the @who@foo.bar account identifier and click the bookmarklet.
+For people with **one account at one instance**: Highlight the text for a Mastodon account and click this to follow them. This is useful, for example, if you see someone post their account info on a blog or somewhere else outside of Mastodon.
 
-Create additional bookmarklets for each instance.
+For people with **multiple accounts**: Make your follow come from the correct instance. 
+
+This bookmarklet also attempts to locate an account without it being in the selection. For a few tested insances, it will find an account when you are looking at their profile on Mastodon (in a column or in its own page).
+
+Install!
 
 TODO:
 
-* make it clickable from profile page w/ out having to highlight anything
-* make it clickable for short account IDs (like @one instead of @one@two.three)
-* ~~trim whitespace? double-click for highliting didn't work on profile page~~
-* ~~MAKE IT USE https://mastodon.technology/authorize_follow?acct=arunsathiya%40mastodon.social (bookmarks dedicated to each account)~~
+* [x] make it clickable from profile page or column w/ out having to highlight anything
+* [x] make it clickable for short account IDs (like @one instead of @one@two.three) and when the initial @ is forgotton (foo@bar.com instead of @foo@bar.com) 
+* [x] trim whitespace? double-click for highliting didn't work on profile page
+* [x] MAKE IT USE https://mastodon.technology/authorize_follow?acct=foo@bar.social (bookmarks dedicated to each account)

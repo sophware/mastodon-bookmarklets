@@ -26,17 +26,21 @@ try {
 } catch (err) {}
 
 if (fSL) {
+   username = fullSelection;
+   username = username.trim();
+   if (!(username.match(/^@/))) {username='@'+username;}
    username = fullSelection.match(/(@)(\S[^\n]+)/)[2];
-   uL = fSL;
+   //uL = fSL;
 } else if (cUL) {
    username = columnUsername.match(/(@)(\S[^\n]+)/)[2];
-   uL = cUL;
+   //uL = cUL;
 } else if (pUL) {
    username = profileUsername.match(/\n(@)(\S[^\n]+)/)[2];
-   uL = pUL;
+   //uL = pUL;
 }
-username = username.trim();
-hostname = hostname.trim();
+//username = username.trim();
+
+//hostname = hostname.trim();
 
 if (username) {
 	if (username.match(/@/g)) {
