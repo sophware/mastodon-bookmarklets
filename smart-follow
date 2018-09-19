@@ -29,7 +29,7 @@ if (fSL) {
    username = fullSelection;
    username = username.trim();
    if (!(username.match(/^@/))) {username='@'+username;}
-   username = fullSelection.match(/(@)(\S[^\n]+)/)[2];
+   username = username.match(/(@)(\S[^\n]+)/)[2];
 } else if (cUL) {
    username = columnUsername.match(/(@)(\S[^\n]+)/)[2];
 } else if (pUL) {
