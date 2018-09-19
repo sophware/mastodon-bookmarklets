@@ -30,17 +30,13 @@ if (fSL) {
    username = username.trim();
    if (!(username.match(/^@/))) {username='@'+username;}
    username = fullSelection.match(/(@)(\S[^\n]+)/)[2];
-   //uL = fSL;
 } else if (cUL) {
    username = columnUsername.match(/(@)(\S[^\n]+)/)[2];
-   //uL = cUL;
 } else if (pUL) {
    username = profileUsername.match(/\n(@)(\S[^\n]+)/)[2];
-   //uL = pUL;
 }
-//username = username.trim();
 
-//hostname = hostname.trim();
+hostname = hostname.trim();
 
 if (username) {
 	if (username.match(/@/g)) {

@@ -3,15 +3,15 @@ Bookmarklets for use with the Mastodon social network
 
 ## Smart follow
 
-Follow an account you have selected on a page.
+Follow an account you have highlighted on a page.
 
-For people with **one account at one instance**: Highlight the text for a Mastodon account and click this to follow them. This is useful, for example, if you see someone post their account info on a blog or somewhere else outside of Mastodon.
+For people with **one account at one instance**: Highlight the text for a Mastodon account and click this to follow them. This is useful, for example, if you see someone post their account info on a blog or elsewhere outside of Mastodon.
 
 For people with **multiple accounts**: Make your follow come from the correct instance. 
 
-This bookmarklet also attempts to locate an account without it being in the selection. For a few tested insances, it will find an account when you are looking at their profile on Mastodon (in a column or in its own page).
+NOTE: This bookmarklet also attempts to locate an account without it being selected. Tested at a few instances, it will try to find an account when you are looking at its profile on Mastodon (in a column or in its own page).
 
-Install!
+Install here=> 
 
 TODO:
 
