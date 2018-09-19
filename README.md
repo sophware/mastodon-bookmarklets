@@ -11,7 +11,7 @@ For people with **multiple accounts**: Make your follow come from the correct in
 
 NOTE: This bookmarklet also attempts to locate an account without it being selected. Tested at a few instances, it will try to find an account when you are looking at its profile on Mastodon (in a column or in its own page).
 
-Install instructions [a here](https://sophware.github.io/mastodon-bookmarklets/)
+Install instructions [here](https://sophware.github.io/mastodon-bookmarklets/)
 
 TODO:
 
