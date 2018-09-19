@@ -1,0 +1,13 @@
+other bmarklets -
+
+search (including qoto? other searches seemed better)
+reply elsewhere
+quote reply (probably not)
+
+
+look into what in the 2.5 announcement somewhere talked about searching for a toot
+
+
+create test plans
+	multiple instances
+	multiple modalities (highlight, column profile, full profile, click on toot? i forget)
